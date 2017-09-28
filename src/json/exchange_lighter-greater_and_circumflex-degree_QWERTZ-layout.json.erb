@@ -1,0 +1,14 @@
+{
+    "title": "Exchange lighter-greater and circumflex-degree (Microsoft Natural Ergonomic Keyboard 4000 QWERTZ layout)",
+    "rules": [
+        {
+          "description": "Exchange lighter-greater (<>) and circumflex-degree (^°) (Microsoft Natural Ergonomic Keyboard 4000 QWERTZ layout)",
+          "manipulators": [
+                { "type": "basic", "from": <%= from("non_us_backslash", [], ["caps_lock"]) %>, "to": <%= to([["grave_accent_and_tilde", []]]) %> },
+                { "type": "basic", "from": <%= from("grave_accent_and_tilde", [], ["caps_lock"]) %>, "to": <%= to([["non_us_backslash", []]]) %> },
+                { "type": "basic", "from": <%= from("non_us_backslash", ["shift"], ["caps_lock"]) %>, "to": <%= to([["grave_accent_and_tilde", ["left_shift"]]]) %> },
+                { "type": "basic", "from": <%= from("grave_accent_and_tilde", ["shift"], ["caps_lock"]) %>, "to": <%= to([["non_us_backslash", ["left_shift"]]]) %> }
+            ]
+        }
+    ]
+}
